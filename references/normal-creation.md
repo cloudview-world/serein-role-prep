@@ -95,7 +95,7 @@ Each field is a fenced `text` block, so chat apps and Markdown viewers show a co
 ````markdown
 # <Name> · Serein role card (normal creation)
 
-Made with serein-role-prep 1.0.0 for Serein 0.1.0. Copy each block into the field with the same name.
+Made with serein-role-prep 1.0.1 for Serein 0.1.0. Copy each block into the field with the same name.
 
 ## 角色名 Name
 ```text

@@ -9,7 +9,7 @@ An Agent Skill that turns your character material into Markdown you can paste st
 
 Your agent can read what Serein cannot: PDF, Word, web pages, screenshots, or just a name. It asks you one question (normal creation, persona replica, or both) and writes the files.
 
-Version **1.0.0** · for Serein **0.1.0** (builds from November 2026) · [MIT License](LICENSE)
+Version **1.0.1** · for Serein **0.1.0** (builds from November 2026) · [MIT License](LICENSE)
 
 ## Install
 
@@ -56,7 +56,7 @@ Serein's content language has three options: 简体中文, 繁體中文, English
 
 | Skill | Serein | What it follows |
 |---|---|---|
-| 1.0.0 | 0.1.0, builds from November 2026 | field limits and counting rule (ASCII counts 0.4); opener with actions in brackets; persona replica format role-fields-v3 and the 24 KB per-request limit for models other than DeepSeek's official ones |
+| 1.0.0–1.0.1 | 0.1.0, builds from November 2026 | field limits and counting rule (ASCII counts 0.4); opener with actions in brackets; persona replica format role-fields-v3 and the 24 KB per-request limit for models other than DeepSeek's official ones |
 
 When Serein changes these rules, this skill gets a new version. The version is in `SKILL.md` (`metadata.version`).
 
