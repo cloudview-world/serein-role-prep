@@ -1,6 +1,6 @@
 # Persona replica (人格复刻)
 
-In Serein's 人格复刻, the user adds material and Serein's own model (the user's model) turns it into a role with a deep persona: a block the role carries in every chat (how they speak, values and lines, life events), a library of experiences it looks up when relevant, and skills. For most models Serein sends at most 24 KB per request, and Serein's own instructions already use about half of that. Larger material is split into many requests, which is slow. Your job: one compact source document that Serein reads in a single request. Write `<name>-serein-replica.md`.
+In Serein's 人格复刻, the user adds material and Serein's own model (the user's model) turns it into a role with a deep persona: a block the role carries in every chat (how they speak, values and lines, life events), a library of experiences it looks up when relevant, and skills. How much Serein reads in one request depends on the model. With a relay, an alias, a local address, or a model Serein has not checked, one request is at most 24 KB, and Serein's own instructions already use about half of that; larger material is split into many requests, which is slow. With the official Claude, GPT, Gemini and DeepSeek models in Serein's model list, used through their official addresses, Serein builds from 28 November 2026 on read far more at once (DeepSeek's two official models already did before). Your job: one compact source document that any model, on any Serein version, reads in a single request. Write `<name>-serein-replica.md`.
 
 ## Size budget (hard limit)
 
@@ -9,7 +9,7 @@ In Serein's 人格复刻, the user adds material and Serein's own model (the use
 - If you cannot measure bytes: at most 3,000 characters for Chinese, Japanese, Korean or Thai text; at most 9,000 characters (about 1,500 words) for English and other Latin-script text.
 - If you can, measure the final file (for example `wc -c`). If it is over, first drop the least telling experiences, then shorten wording. Never drop identity lines, values and lines, conflicts or uncertainty marks.
 
-Why these numbers: a request may be 24,576 bytes. Serein's instructions, the tag list and a 1 KB reserve take about 11.4 KB, up to about 13 KB when the user writes a 100-character note and the file has a long name. The material is JSON-escaped twice, so each line break costs 3 bytes and each `"` 4 bytes. 10,000 bytes and 300 lines stay inside the rest with room to spare. DeepSeek's official models get far more room in Serein, but keep this size anyway so the file works with any model.
+Why these numbers: the strictest case is a 24 KB model, where one request may be 24,576 bytes. Serein's instructions, the tag list and a 1 KB reserve take about 11.4 KB, up to about 13 KB when the user writes a 100-character note and the file has a long name. The material is JSON-escaped twice, so each line break costs 3 bytes and each `"` 4 bytes. A file of 10,000 bytes and 300 lines brings the request to about 23.6 KB at most, still inside the limit. The checked official models get up to 512 KB per request, but keep this size anyway: then the same file reads in one go with every model and every Serein version.
 
 ## Layout
 
