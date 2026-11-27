@@ -9,7 +9,7 @@ In Serein's 人格复刻, the user adds material and Serein's own model (the use
 - If you cannot measure bytes: at most 3,000 characters for Chinese, Japanese, Korean or Thai text; at most 9,000 characters (about 1,500 words) for English and other Latin-script text.
 - If you can, measure the final file (for example `wc -c`). If it is over, first drop the least telling experiences, then shorten wording. Never drop identity lines, values and lines, conflicts or uncertainty marks.
 
-Why these numbers: the strictest case is a 24 KB model, where one request may be 24,576 bytes. Serein's instructions, the tag list and a 1 KB reserve take about 11.4 KB, up to about 13 KB when the user writes a 100-character note and the file has a long name. The material is JSON-escaped twice, so each line break costs 3 bytes and each `"` 4 bytes. A file of 10,000 bytes and 300 lines brings the request to about 23.6 KB at most, still inside the limit. The checked official models get up to 512 KB per request, but keep this size anyway: then the same file reads in one go with every model and every Serein version.
+Why these numbers: the strictest case is a 24 KB model, where one request may be 24,576 bytes. Serein's instructions, the tag list and a 1 KB reserve take about 11.6 KB, up to about 13.2 KB when the user writes a 100-character note and the file has a long name. The material is JSON-escaped twice, so each line break costs 3 bytes and each `"` 4 bytes. A file of 10,000 bytes and 300 lines brings the request to about 23.8 KB at most, still inside the limit. The checked official models get up to 512 KB per request, but keep this size anyway: then the same file reads in one go with every model and every Serein version.
 
 ## Layout
 

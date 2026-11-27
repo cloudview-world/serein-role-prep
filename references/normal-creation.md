@@ -63,10 +63,14 @@ Copy the names exactly from the column of the chosen content language. Do not tr
 
 **简介 Intro.** One to three sentences for someone browsing roles: who this is and what kind of person. No "based on the material", no report tone. Do not put anything here that the chat AI needs to know; it never reads this field.
 
-**开场白 Opener.** The first thing the role says when meeting the user. The user is meeting the role for the first time.
+**开场白 Opener.** The first thing the role says when meeting the user. The user is meeting the role for the first time. Serein checks the opener's format with a fixed rule when the role is saved; if it fails, the author is asked to tidy it with their own model first. Write it so it passes.
 
-- Actions and expressions go in brackets: full-width （） in Chinese, half-width () in English and other languages. Inside the brackets write a short action without a subject, for example （放下手里的笔，抬头看你） or (sets the kettle down).
-- Outside the brackets write only what the role says, in the first person.
+- Actions, expressions and scene go in round brackets: full-width （） in Chinese and Japanese, half-width () in English (Serein accepts both). Close every bracket you open.
+- Inside the brackets write a short action. For the role's own action leave out the subject; for the user write 你 / you. Never 她 / 他 / she / he or the role's name. For example （放下手里的笔，抬头看你） or (sets the kettle down).
+- Outside the brackets write only what the role says aloud, in the first person, with no marks around it. Outside the brackets Serein rejects paired quote marks (“” "" 「」 『』 ‘’ ''), paired asterisks (`*…*` `＊…＊`) and the marks 【】 [] ［］ 〔〕 〖〗. Inside the brackets they are not checked.
+- An apostrophe (I'm, don't, students') is not a quote mark. Put titles of books, songs and films in 《》.
+- These also fail, so avoid them: quote marks around a single word in the speech (你也喜欢“星空”吗), emoticons such as `:(` and `*` used as a multiplication sign.
+- Japanese: 「」 and 『』 count as quote marks too. Do not wrap the role's lines in 「」; write them bare outside the brackets.
 - No third-person narration such as 她笑着说 or "He looks up at you", inside or outside the brackets.
 - Do not invent a past with the user: no "long time no see", no shared memories, no earlier promises. Do not assume the user's name, gender or situation.
 - Make it fit this role's personality and situation. No generic greeting.
@@ -74,7 +78,10 @@ Copy the names exactly from the column of the chosen content language. Do not tr
 
 Good: `（把茶盏推到你面前）坐吧。外面雨大，先喝口热的。`
 Good: `(closes the ledger) You're letting the cold in. Shut the door and tell me what you need.`
-Bad: `她微笑着看向你：“好久不见，你终于回来了。”` (narration, invented past)
+Good: `（手を止めて、顔を上げる）いらっしゃい。外、寒かったでしょう。こっちで温まっていって。`
+Bad: `她微笑着看向你：“好久不见，你终于回来了。”` (narration, quote marks, invented past)
+Bad: `*smiles* Hello, you made it.` (asterisks; write `(smiles) Hello, you made it.`)
+Bad: `你也喜欢“星空”这首歌吗？我常听。` (quote marks around a word; write 《星空》)
 
 **人设 Persona.** What the chat AI reads on every turn; it must be enough on its own to play the role well. Write it in the third person as a description of the role (for example "沈砚秋是……" or "Holmes is..."), not as "You are...". Include:
 
@@ -95,7 +102,7 @@ Each field is a fenced `text` block, so chat apps and Markdown viewers show a co
 ````markdown
 # <Name> · Serein role card (normal creation)
 
-Made with serein-role-prep 1.0.2 for Serein 0.1.0. Copy each block into the field with the same name.
+Made with serein-role-prep 1.0.3 for Serein 0.1.0. Copy each block into the field with the same name.
 
 ## 角色名 Name
 ```text
@@ -148,7 +155,7 @@ Write the Notes in the user's language.
 
 - [ ] Name, Gender, Content language, Intro, Opener and Persona are all filled.
 - [ ] Every count is within "Write at most", counted by Serein's rule or the safe fallback, and the counts are in Notes.
-- [ ] Opener: actions in brackets, only the role's words outside, no third-person narration, no invented past with the user, at least 10 characters.
+- [ ] Opener: actions in brackets and every bracket closed; outside the brackets only the role's spoken words, with no paired quote marks (「」 included), no paired asterisks and no 【】 or [] marks; no she / he or role name inside the brackets; no invented past with the user; at least 10 characters.
 - [ ] Gender and every fact can be traced to the material (or, for a name only, to well-known facts); uncertain things are marked.
 - [ ] Tags are from the list, at most 3.
 - [ ] Nothing crosses the safety lines in SKILL.md.

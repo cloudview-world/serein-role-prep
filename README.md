@@ -9,7 +9,7 @@ An Agent Skill that turns your character material into Markdown you can paste st
 
 Your agent can read what Serein cannot: PDF, Word, web pages, screenshots, or just a name. It asks you one question (normal creation, persona replica, or both) and writes the files.
 
-Version **1.0.2** · for Serein **0.1.0** (builds from November 2026) · [MIT License](LICENSE)
+Version **1.0.3** · for Serein **0.1.0** (builds from November 2026) · [MIT License](LICENSE)
 
 ## Install
 
@@ -58,6 +58,7 @@ Serein's content language has three options: 简体中文, 繁體中文, English
 |---|---|---|
 | 1.0.0–1.0.1 | 0.1.0, builds from November 2026 | field limits and counting rule (ASCII counts 0.4); opener with actions in brackets; persona replica format role-fields-v3 and the 24 KB per-request limit for models other than DeepSeek's official ones |
 | 1.0.2 | 0.1.0, builds from November 2026, including the rules of 28 November 2026 | same as above, with the new reading rule: the 24 KB limit now applies only to relays, aliases, local addresses and models Serein has not checked; the official Claude, GPT, Gemini and DeepSeek models in Serein's model list, through their official addresses, read up to 512 KB per request in builds from 28 November 2026 on |
+| 1.0.3 | 0.1.0, builds from November 2026, including the rules of 28 November 2026 | same as 1.0.2, plus the opener format Serein checks when saving, from 28 November 2026: outside the round brackets no quote marks (「」 included), no asterisks and no 【】 or [] marks; every bracket closed |
 
 The persona replica document is always kept to the 24 KB-safe size, so it reads in one request with every model and every Serein version.
 

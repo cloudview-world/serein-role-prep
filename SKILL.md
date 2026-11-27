@@ -3,7 +3,7 @@ name: serein-role-prep
 description: Turns character material (text, files, web pages, images, or only a name) into Markdown files ready to paste into the Serein (栖语) companion app - a field-by-field card for normal role creation (普通创建) and/or a compact source document that Serein's Persona Replica (人格复刻) reads in one request. Use when the user mentions Serein or 栖语, or wants to make a Serein role, character card, 角色, 人设, 开场白 or 人格复刻 from their material.
 license: MIT
 metadata:
-  version: "1.0.2"
+  version: "1.0.3"
   serein-app: "0.1.0, builds from November 2026"
 ---
 
